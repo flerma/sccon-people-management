@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "46f21973-30f2-498a-9aaf-499486b0468c",
+		"name": "sccon-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27777037"
+	},
+	"item": [
+		{
+			"name": "Find All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/person/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Age By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/person/1/age?output=days",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"1",
+						"age"
+					],
+					"query": [
+						{
+							"key": "output",
+							"value": "days"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Salary By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/person/1/salary?output=min",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"1",
+						"salary"
+					],
+					"query": [
+						{
+							"key": "output",
+							"value": "min"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Toro Loco\",\r\n    \"birthDay\": \"2000-04-06\",\r\n    \"hireDate\": \"2020-05-10\",\r\n    \"salary\": 6000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/person/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Toro Loco\",\r\n    \"birthDay\": \"2000-04-06\",\r\n    \"hireDate\": \"2020-06-10\",\r\n    \"salary\": 6000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/person/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Salary",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/person/1?salary=1558",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"1"
+					],
+					"query": [
+						{
+							"key": "salary",
+							"value": "1558"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
