@@ -16,7 +16,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class PersonService {
+class PersonService implements PersonServicePort {
 
     private static final String MINIMUM_SALARY_VALUE = "1302.00";
     private static final String ANNUAL_BONUS_AMOUNT = "500.00";

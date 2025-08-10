@@ -3,7 +3,7 @@ package com.sccon.presentation.person;
 import com.sccon.domain.enums.PeriodOutput;
 import com.sccon.domain.enums.SalaryOutput;
 import com.sccon.domain.model.Person;
-import com.sccon.domain.service.person.PersonService;
+import com.sccon.domain.service.person.PersonServicePort;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -31,7 +31,7 @@ import static org.apache.commons.lang3.BooleanUtils.isFalse;
 @RequiredArgsConstructor
 class PersonController {
 
-    private final PersonService personService;
+    private final PersonServicePort personService;
 
     @GetMapping
     public List<PersonResponse> listAll() {

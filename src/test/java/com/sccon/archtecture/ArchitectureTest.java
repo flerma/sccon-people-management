@@ -31,7 +31,8 @@ public class ArchitectureTest {
         classes()
             .that().resideInAPackage("..service..")
             .and().areNotAnonymousClasses()
-            .should().haveSimpleNameEndingWith("Service");
+            .should().haveSimpleNameEndingWith("Service")
+            .orShould().haveSimpleNameContaining("Port");
 
     @ArchTest
     static final ArchRule repositories_should_have_right_sufix =
